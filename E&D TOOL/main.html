@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Caesar & Image Encryptor</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>Text Encryptor</h2>
+
+    <label for="message">Message:</label>
+    <input type="text" id="message" placeholder="Enter message" />
+
+    <label for="textShift">Text Shift (0–25):</label>
+    <input type="number" id="textShift" value="3" min="0" max="25" />
+    <label><input type="checkbox" id="showKey"> Show Shift</label>
+
+    <div class="btns">
+      <button id="encryptTextBtn">Encrypt</button>
+      <button id="decryptTextBtn">Decrypt</button>
+      <button id="copyTextBtn">📋 Copy</button>
+      <button id="saveLogBtn">💾 Save Log</button>
+    </div>
+
+    <div class="output" id="textOutput"></div>
+
+    <hr>
+
+    <h2>Image Encryptor</h2>
+
+    <label for="imageInput">Select Image:</label>
+    <input type="file" id="imageInput" accept="image/*" />
+
+    <label for="imageKey">Image Key (1–255):</label>
+    <input type="number" id="imageKey" value="5" min="1" max="255" />
+
+    <div class="btns">
+      <button id="encryptImageBtn">Encrypt Image</button>
+      <button id="decryptImageBtn">Decrypt Image</button>
+    </div>
+
+    <label>Preview:</label>
+    <img id="imagePreview" src="#" alt="No image" style="display:none; max-width:100%; margin-top:10px;" />
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
